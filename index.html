@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Midwest Population Genetics 2026 · University of Chicago</title>
+  <title>Midwest Population Genetics 2025 · University of Chicago</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg: #0b0c0e;
       --bg2: #111318;
@@ -24,9 +22,7 @@
       --text-dim: #5a5c5e;
       --rule: rgba(255,255,255,0.07);
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Crimson Pro', Georgia, serif;
       background: var(--bg);
@@ -35,7 +31,6 @@
       line-height: 1.75;
       overflow-x: hidden;
     }
-
     /* ─── HERO ─── */
     #hero {
       position: relative;
@@ -47,14 +42,12 @@
       padding-bottom: 80px;
       overflow: hidden;
     }
-
     #hero-canvas {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
     }
-
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -64,7 +57,6 @@
         rgba(11,12,14,0.85) 80%,
         rgba(11,12,14,1) 100%);
     }
-
     .hero-content {
       position: relative;
       z-index: 2;
@@ -73,7 +65,6 @@
       padding: 0 48px;
       width: 100%;
     }
-
     .eyebrow {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
@@ -84,7 +75,6 @@
       opacity: 0;
       animation: fadeUp 0.8s ease 0.2s forwards;
     }
-
     h1 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(4rem, 10vw, 9rem);
@@ -95,9 +85,7 @@
       opacity: 0;
       animation: fadeUp 0.8s ease 0.4s forwards;
     }
-
     h1 .accent { color: var(--maroon-bright); }
-
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
@@ -105,7 +93,6 @@
       opacity: 0;
       animation: fadeUp 0.8s ease 0.6s forwards;
     }
-
     .hero-meta-item .label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
@@ -114,13 +101,11 @@
       color: var(--text-dim);
       margin-bottom: 4px;
     }
-
     .hero-meta-item .val {
       font-size: 1.1rem;
       font-weight: 300;
       color: var(--text);
     }
-
     .scroll-hint {
       position: absolute;
       bottom: 28px;
@@ -139,7 +124,6 @@
       opacity: 0;
       animation: fadeIn 1s ease 1.4s forwards;
     }
-
     .scroll-hint::after {
       content: '';
       display: block;
@@ -148,19 +132,15 @@
       background: linear-gradient(to bottom, var(--text-dim), transparent);
       animation: scrollLine 1.8s ease-in-out infinite;
     }
-
     @keyframes scrollLine {
       0%, 100% { transform: scaleY(1); opacity: 0.5; }
       50% { transform: scaleY(0.4); opacity: 1; }
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes fadeIn { to { opacity: 1; } }
-
     /* ─── NAV ─── */
     nav {
       position: sticky;
@@ -170,7 +150,6 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--rule);
     }
-
     .nav-inner {
       max-width: 1000px;
       margin: 0 auto;
@@ -180,7 +159,6 @@
       justify-content: space-between;
       height: 52px;
     }
-
     .nav-brand {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
@@ -189,9 +167,7 @@
       color: var(--gold);
       text-decoration: none;
     }
-
     nav ul { list-style: none; display: flex; }
-
     nav a {
       display: block;
       padding: 0 16px;
@@ -205,7 +181,6 @@
       transition: color 0.15s;
       position: relative;
     }
-
     nav a::after {
       content: '';
       position: absolute;
@@ -215,22 +190,18 @@
       transform: scaleX(0);
       transition: transform 0.2s;
     }
-
     nav a:hover { color: var(--text); }
     nav a:hover::after { transform: scaleX(1); }
-
     /* ─── LAYOUT ─── */
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 48px;
     }
-
     section {
       padding: 96px 0;
       border-top: 1px solid var(--rule);
     }
-
     .section-tag {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
@@ -242,7 +213,6 @@
       align-items: center;
       gap: 12px;
     }
-
     .section-tag::before {
       content: '';
       display: block;
@@ -250,7 +220,6 @@
       height: 1px;
       background: var(--maroon-bright);
     }
-
     h2 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.4rem, 5vw, 4rem);
@@ -259,25 +228,21 @@
       color: var(--text);
       margin-bottom: 32px;
     }
-
     p {
       color: var(--text-mid);
       margin-bottom: 1.1em;
       font-weight: 300;
       max-width: 68ch;
     }
-
     p:last-child { margin-bottom: 0; }
     a { color: var(--gold); text-decoration: none; }
     a:hover { color: var(--text); }
-
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
       align-items: start;
     }
-
     /* ─── STAT GRID ─── */
     .stat-grid {
       display: grid;
@@ -287,15 +252,12 @@
       border: 1px solid var(--rule);
       margin-top: 40px;
     }
-
     .stat-cell {
       background: var(--bg2);
       padding: 28px 32px;
       transition: background 0.2s;
     }
-
     .stat-cell:hover { background: var(--bg3); }
-
     .stat-label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
@@ -304,7 +266,6 @@
       color: var(--text-dim);
       margin-bottom: 10px;
     }
-
     .stat-value {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2rem;
@@ -312,14 +273,12 @@
       color: var(--text);
       line-height: 1;
     }
-
     .stat-sub {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       color: var(--text-dim);
       margin-top: 6px;
     }
-
     /* ─── REGISTER ─── */
     .register-block {
       background: var(--bg2);
@@ -328,7 +287,6 @@
       padding: 40px 44px;
       margin-top: 40px;
     }
-
     .register-block h3 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2rem;
@@ -336,7 +294,6 @@
       color: var(--text);
       margin-bottom: 16px;
     }
-
     .deadline-row {
       display: flex;
       flex-wrap: wrap;
@@ -346,7 +303,6 @@
       border-top: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
     }
-
     .deadline-item .dl-label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
@@ -355,9 +311,7 @@
       color: var(--text-dim);
       margin-bottom: 4px;
     }
-
     .deadline-item .dl-val { font-size: 1rem; color: var(--text-mid); }
-
     .tbd {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
@@ -371,7 +325,6 @@
       margin-left: 6px;
       vertical-align: middle;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -386,13 +339,11 @@
       text-transform: uppercase;
       transition: background 0.2s, transform 0.15s;
     }
-
     .btn:hover {
       background: var(--maroon-bright);
       color: white;
       transform: translateX(3px);
     }
-
     /* ─── PROGRAM ─── */
     .program-grid {
       display: grid;
@@ -400,21 +351,17 @@
       gap: 16px;
       margin-top: 40px;
     }
-
     .prog-card {
       background: var(--bg2);
       border: 1px solid var(--rule);
       padding: 28px 32px;
       transition: border-color 0.2s, transform 0.2s;
     }
-
     .prog-card:hover {
-      border-color: rgba(155,28,28,0.4);
+      border-color: rgba(128,0,0,0.4);
       transform: translateY(-2px);
     }
-
     .prog-card .pc-icon { font-size: 1.6rem; margin-bottom: 14px; display: block; }
-
     .prog-card h3 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.5rem;
@@ -422,23 +369,18 @@
       color: var(--text);
       margin-bottom: 10px;
     }
-
     .prog-card p { font-size: 0.95rem; margin-bottom: 0; }
-
     /* ─── LOGISTICS ─── */
     .logistics-table {
       margin-top: 36px;
       border: 1px solid var(--rule);
     }
-
     .logistics-row {
       display: grid;
       grid-template-columns: 140px 1fr;
       border-bottom: 1px solid var(--rule);
     }
-
     .logistics-row:last-child { border-bottom: none; }
-
     .logistics-key {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9.5px;
@@ -451,7 +393,6 @@
       display: flex;
       align-items: center;
     }
-
     .logistics-val {
       padding: 18px 24px;
       color: var(--text-mid);
@@ -459,7 +400,33 @@
       font-weight: 300;
       line-height: 1.6;
     }
-
+    /* ─── SPONSORS ─── */
+    .sponsor-strip {
+      margin-top: 40px;
+      padding: 28px 32px;
+      background: var(--bg2);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--gold-dim);
+    }
+    .sponsor-strip p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+      max-width: none;
+    }
+    .sponsor-strip .sponsor-names {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1rem;
+      color: var(--text-mid);
+      font-weight: 300;
+      letter-spacing: 0;
+      text-transform: none;
+      max-width: none;
+      margin-bottom: 0;
+    }
     /* ─── ORGANIZERS ─── */
     .org-grid {
       display: flex;
@@ -467,7 +434,6 @@
       gap: 16px;
       margin-top: 36px;
     }
-
     .org-card {
       flex: 1;
       min-width: 200px;
@@ -476,9 +442,7 @@
       padding: 24px 28px;
       transition: border-color 0.2s;
     }
-
     .org-card:hover { border-color: rgba(201,168,76,0.3); }
-
     .org-card .org-name {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.35rem;
@@ -486,7 +450,6 @@
       color: var(--text);
       margin-bottom: 2px;
     }
-
     .org-card .org-role {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9px;
@@ -495,10 +458,8 @@
       color: var(--text-dim);
       margin-bottom: 12px;
     }
-
     .org-card a { font-size: 0.88rem; color: var(--gold-dim); }
     .org-card a:hover { color: var(--gold); }
-
     /* ─── FOOTER ─── */
     footer {
       border-top: 1px solid var(--rule);
@@ -511,14 +472,12 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-
     .footer-brand {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.6rem;
       letter-spacing: 0.08em;
       color: var(--text-dim);
     }
-
     .footer-meta {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9.5px;
@@ -527,10 +486,8 @@
       text-align: right;
       line-height: 1.9;
     }
-
     .footer-meta a { color: var(--text-dim); }
     .footer-meta a:hover { color: var(--gold); }
-
     /* ─── RESPONSIVE ─── */
     @media (max-width: 700px) {
       .hero-content { padding: 0 24px; }
@@ -546,7 +503,6 @@
   </style>
 </head>
 <body>
-
 <!-- ─── HERO ─── -->
 <section id="hero">
   <canvas id="hero-canvas"></canvas>
@@ -557,11 +513,11 @@
     <div class="hero-meta">
       <div class="hero-meta-item">
         <div class="label">Dates</div>
-        <div class="val">August 14–16, 2025</div>
+        <div class="val">August 14–15, 2025</div>
       </div>
       <div class="hero-meta-item">
         <div class="label">Location</div>
-        <div class="val">University of Chicago · Hyde Park</div>
+        <div class="val">University of Chicago · KCBD 1103</div>
       </div>
       <div class="hero-meta-item">
         <div class="label">Registration</div>
@@ -571,7 +527,6 @@
   </div>
   <div class="scroll-hint">scroll</div>
 </section>
-
 <!-- ─── NAV ─── -->
 <nav>
   <div class="nav-inner">
@@ -585,7 +540,6 @@
     </ul>
   </div>
 </nav>
-
 <!-- ─── ABOUT ─── -->
 <section id="about">
   <div class="container">
@@ -606,6 +560,10 @@
           encouraged to present — prizes will be awarded for best student and postdoc
           talk and poster.
         </p>
+        <p>
+          This meeting is made possible by the generous support of the Department of Ecology &amp; Evolution
+          and the Department of Human Genetics at the University of Chicago.
+        </p>
         <p style="font-style:italic; color: var(--text-dim); font-size:0.95rem;">
           Serving the Midwest popgen community since 2014.
         </p>
@@ -614,8 +572,8 @@
         <div class="stat-grid">
           <div class="stat-cell">
             <div class="stat-label">Dates</div>
-            <div class="stat-value">AUG<br>14–16</div>
-            <div class="stat-sub">Thursday – Saturday</div>
+            <div class="stat-value">AUG<br>14–15</div>
+            <div class="stat-sub">Thursday – Friday</div>
           </div>
           <div class="stat-cell">
             <div class="stat-label">Cost</div>
@@ -623,9 +581,9 @@
             <div class="stat-sub">No registration fee</div>
           </div>
           <div class="stat-cell">
-            <div class="stat-label">Location</div>
-            <div class="stat-value" style="font-size:1.3rem;line-height:1.2;">Hyde Park,<br>Chicago</div>
-            <div class="stat-sub">Venue TBA</div>
+            <div class="stat-label">Venue</div>
+            <div class="stat-value" style="font-size:1.1rem;line-height:1.2;">KCBD<br>1103</div>
+            <div class="stat-sub">UChicago · Hyde Park</div>
           </div>
           <div class="stat-cell">
             <div class="stat-label">Talk length</div>
@@ -637,7 +595,6 @@
     </div>
   </div>
 </section>
-
 <!-- ─── REGISTER ─── -->
 <section id="register">
   <div class="container">
@@ -676,7 +633,6 @@
     </div>
   </div>
 </section>
-
 <!-- ─── PROGRAM ─── -->
 <section id="program">
   <div class="container">
@@ -684,8 +640,8 @@
     <h2>TALKS, POSTERS &amp; MORE</h2>
     <p>
       The full schedule will be posted once talk selection is complete.
-      The meeting will span two and a half days with contributed talks,
-      a poster session, and social events across Hyde Park.
+      The meeting spans two days with contributed talks, a poster session,
+      and a Friday evening social at Promontory Point in Hyde Park.
     </p>
     <div class="program-grid">
       <div class="prog-card">
@@ -704,31 +660,38 @@
         <p>Invited speaker lineup coming soon. <span class="tbd">tba</span></p>
       </div>
       <div class="prog-card">
-        <span class="pc-icon">🍻</span>
-        <h3>Social Events</h3>
-        <p>Evening events and social programming in Hyde Park. Details coming soon. <span class="tbd">tba</span></p>
+        <span class="pc-icon">🔥</span>
+        <h3>Friday BBQ Social</h3>
+        <p>Join us Friday evening at Promontory Point in Hyde Park for a lakeside BBQ dinner, starting at 5 pm.</p>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ─── LOGISTICS ─── -->
 <section id="logistics">
   <div class="container">
     <div class="section-tag">Logistics</div>
-    <h2>GETTING HERE</h2>
+    <h2>GETTING HERE &amp; GETTING SETTLED</h2>
     <p>
-      The meeting will be held on or near the University of Chicago campus in Hyde Park,
-      on Chicago's South Side. Venue details will be posted once confirmed.
+      The meeting will be held in KCBD 1103 on the University of Chicago campus in Hyde Park,
+      on Chicago's South Side.
     </p>
     <div class="logistics-table">
       <div class="logistics-row">
         <div class="logistics-key">Venue</div>
-        <div class="logistics-val">University of Chicago, Hyde Park — exact location TBA</div>
+        <div class="logistics-val">Knapp Center for Biomedical Discovery (KCBD), Room 1103 · University of Chicago · 900 E 57th St, Chicago, IL 60637</div>
+      </div>
+      <div class="logistics-row">
+        <div class="logistics-key">Food</div>
+        <div class="logistics-val">
+          Coffee will be available during breaks throughout the meeting.<br>
+          <strong style="color: var(--text);">Friday:</strong> Dinner provided at the BBQ social from 5 pm onward at Promontory Point.<br>
+          <strong style="color: var(--text);">Saturday:</strong> Breakfast served 8:30–9:00 am; lunch provided 12:15–2:00 pm; snacks during breaks. Dinner on your own.
+        </div>
       </div>
       <div class="logistics-row">
         <div class="logistics-key">By train</div>
-        <div class="logistics-val">Metra Electric Line from Millennium Station → 55th–56th–57th St (~25 min). CTA Red Line to Garfield + bus (#55 or #15) also works.</div>
+        <div class="logistics-val">The <a href="https://metrarail.com/" target="_blank">Metra Electric Line</a> is a convenient option from downtown Chicago — alight at 55th–56th–57th St (~25 min from Millennium Station). The CTA Red Line to Garfield + bus (#55 or #15) also works.</div>
       </div>
       <div class="logistics-row">
         <div class="logistics-key">From O'Hare</div>
@@ -739,17 +702,23 @@
         <div class="logistics-val">CTA Orange Line to Roosevelt → bus or rideshare to Hyde Park (~35 min).</div>
       </div>
       <div class="logistics-row">
-        <div class="logistics-key">By car</div>
-        <div class="logistics-val">~30 min south of the Loop via Lake Shore Drive. Campus parking available.</div>
+        <div class="logistics-key">Parking</div>
+        <div class="logistics-val">Campus parking is available but not free of charge. See the <a href="https://safety-security.uchicago.edu/parking" target="_blank">UChicago parking page</a> for locations and current rates.</div>
       </div>
       <div class="logistics-row">
         <div class="logistics-key">Lodging</div>
-        <div class="logistics-val">Hotel recommendations and nearby options coming soon. <span class="tbd">soon</span></div>
+        <div class="logistics-val">
+          Chicago has a wide range of accommodation options. A few convenient choices in Hyde Park include
+          the <strong style="color: var(--text);">Quad Club</strong>, <strong style="color: var(--text);">The Study</strong>, and <strong style="color: var(--text);">The Sophy</strong>.
+          You can also browse options on <a href="https://www.booking.com" target="_blank">Booking.com</a>,
+          <a href="https://www.hotels.com" target="_blank">Hotels.com</a>, or
+          <a href="https://www.airbnb.com" target="_blank">Airbnb</a>.
+          Feel free to reach out if you need assistance.
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ─── ORGANIZERS ─── -->
 <section id="organizers">
   <div class="container">
@@ -765,21 +734,23 @@
       <div class="org-card">
         <div class="org-name">Jeremy Berg</div>
         <div class="org-role">Assistant Professor · Human Genetics</div>
-        <a href="mailto: jjberg@uchicago.edu">jjberg@uchicago.edu</a>
+        <a href="mailto:jjberg@uchicago.edu">jjberg@uchicago.edu</a>
       </div>
+    </div>
+    <div class="sponsor-strip" style="margin-top: 40px;">
+      <p>Supported by</p>
+      <p class="sponsor-names">Department of Ecology &amp; Evolution · Department of Human Genetics · University of Chicago</p>
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-brand">MWPG 2025</div>
   <div class="footer-meta">
-    University of Chicago · Hyde Park, Chicago, IL<br>
-    August 14–16, 2025<br>
+    University of Chicago · KCBD 1103 · Hyde Park, Chicago, IL<br>
+    August 14–15, 2025<br>
     <a href="mailto:kreiner@uchicago.edu">kreiner@uchicago.edu</a>
   </div>
 </footer>
-
 <!-- ─── CANVAS ANIMATION ─── -->
 <script>
 (function() {
@@ -787,12 +758,10 @@
   const ctx = canvas.getContext('2d');
   let W, H, particles, waves;
   const COLORS = ['#9b1c1c','#c0392b','#c9a84c','#5a5c5e','#3d3530'];
-
   function resize() {
     W = canvas.width = canvas.offsetWidth;
     H = canvas.height = canvas.offsetHeight;
   }
-
   class Wave {
     constructor(i) {
       this.i = i;
@@ -819,7 +788,6 @@
       ctx.stroke();
     }
   }
-
   class Particle {
     constructor() { this.reset(true); }
     reset(init) {
@@ -847,17 +815,14 @@
       ctx.globalAlpha = 1;
     }
   }
-
   function init() {
     resize();
     waves = Array.from({length: 5}, (_, i) => new Wave(i));
     particles = Array.from({length: 90}, () => new Particle());
   }
-
   let t = 0;
   function frame() {
     ctx.clearRect(0, 0, W, H);
-    // faint grid
     ctx.strokeStyle = 'rgba(255,255,255,0.018)';
     ctx.lineWidth = 1;
     for (let x = 0; x < W; x += 60) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
@@ -867,12 +832,10 @@
     t++;
     requestAnimationFrame(frame);
   }
-
   window.addEventListener('resize', resize);
   init();
   frame();
 })();
 </script>
-
 </body>
 </html>
