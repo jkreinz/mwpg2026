@@ -122,20 +122,6 @@
   </style>
 </head>
 <body>
-<section id="hero">
-  <canvas id="hero-canvas"></canvas>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="eyebrow">Midwest Population Genetics · 2026 · University of Chicago</p>
-    <h1><span class="accent">MIDWEST</span><br>POP<br>GEN</h1>
-    <div class="hero-meta">
-      <div class="hero-meta-item"><div class="label">Dates</div><div class="val">August 21–22, 2026</div></div>
-      <div class="hero-meta-item"><div class="label">Location</div><div class="val">University of Chicago · KCBD 1103</div></div>
-      <div class="hero-meta-item"><div class="label">Registration</div><div class="val">Free · Now Open</div></div>
-    </div>
-  </div>
-  <div class="scroll-hint">scroll</div>
-</section>
 <nav>
   <div class="nav-inner">
     <a href="#hero" class="nav-brand">MWPG 2026</a>
@@ -148,6 +134,28 @@
     </ul>
   </div>
 </nav>
+<section id="hero" style="position: relative; padding: 80px 0; border-bottom: 1px solid var(--rule); overflow: hidden;">
+  <canvas id="hero-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%;"></canvas>
+  <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,12,14,0.1) 0%, rgba(11,12,14,0) 50%, rgba(11,12,14,0.5) 90%, rgba(11,12,14,0.8) 100%);"></div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <p class="eyebrow">Midwest Population Genetics · 2026 · University of Chicago</p>
+    <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 4rem; letter-spacing: 0.02em; margin-bottom: 60px; color: var(--text);"><span style="color: var(--maroon-bright);">MIDWEST</span><br>POP<br>GEN</h1>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 60px; max-width: 100%;">
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px;">Dates</div>
+        <div style="font-size: 1.1rem; color: var(--text);">August 21–22, 2026</div>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px;">Location</div>
+        <div style="font-size: 1.1rem; color: var(--text);">University of Chicago · KCBD 1103</div>
+      </div>
+      <div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px;">Abstract Submission</div>
+        <div style="font-size: 1.1rem; color: var(--text);">Now Closed</div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="about">
   <div class="container">
     <div class="two-col">
@@ -158,69 +166,102 @@
         <p>The meeting is free to attend and features contributed talks, a poster session, and plenty of time to hang out and talk science. Students and postdocs are especially encouraged to present — with awards for best student and postdoc talk and poster.</p>
         <p style="font-style:italic; color: var(--text-dim); font-size:0.95rem;">Serving the Midwest popgen community since 2014.</p>
       </div>
-      <div>
-        <div class="stat-grid">
-          <div class="stat-cell">
-            <div class="stat-label">Dates</div>
-            <div class="stat-value">AUG<br>21-22</div>
-            <!-- FIX 1: Thursday → Friday -->
-            <div class="stat-sub">Friday – Saturday</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-label">Cost</div>
-            <div class="stat-value">FREE</div>
-            <div class="stat-sub">No registration fee</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-label">Venue</div>
-            <div class="stat-value" style="font-size:1.1rem;line-height:1.2;">KCBD<br>1103</div>
-            <div class="stat-sub">UChicago · Hyde Park</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-label">Talk length</div>
-            <div class="stat-value">15<span style="font-size:1rem;"> min</span></div>
-            <div class="stat-sub">+ awards for best talk &amp; poster</div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
-<section id="register">
-  <div class="container">
-    <div class="section-tag">Registration</div>
-    <h2>JOIN US IN CHICAGO</h2>
-    <p>Registration is free and open to anyone. To present a talk or poster, submit a title and abstract during registration. Talks are 15 minutes and will be selected to balance topic, career stage, and approach. If demand exceeds talk slots, applicants may be invited to present a poster instead.</p>
-    <div class="register-block">
-      <h3>REGISTER &amp; SUBMIT AN ABSTRACT</h3>
-      <p style="max-width:none;">The registration form — including abstract submission for talks and posters now open. Abstract deadline for oral presentation consideration is June 12th. Final schedule announced by June 26th!</p>
-      <div class="deadline-item">
-        <div class="dl-label">Abstract deadline</div>
-        <div class="dl-val">June 12, 2026</div>
-      </div>
-      <div class="deadline-item">
-        <div class="dl-label">Talk notification</div>
-        <div class="dl-val">June 26, 2026</div>
-      </div>
-      <div class="deadline-item">
-        <div class="dl-label">Registration closes</div>
-        <div class="dl-val">TBA or when capacity reached</div>
-      </div>
-    </div>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScSEXtqYWnNlX1uWR9jqkyqyzShoB47dbi7FgIUE9eRcoU7_g/viewform?usp=header" class="btn">Registration form &nbsp;→</a>
   </div>
 </section>
 <section id="program">
   <div class="container">
     <div class="section-tag">Scientific Program</div>
-    <h2>TALKS, POSTERS &amp; MORE</h2>
-    <p>The full schedule will be posted once talk selection is complete. The meeting spans two days with contributed talks, a poster session, and a Friday evening social at Promontory Point in Hyde Park.</p>
-    <div class="program-grid">
-      <div class="prog-card"><span class="pc-icon">🎤</span><h3>Contributed Talks</h3><p>15-minute talks selected from submitted abstracts, with an eye toward balance across topic, career stage, and approach.</p></div>
-      <div class="prog-card"><span class="pc-icon">📋</span><h3>Poster Session</h3><p>Open to all registered attendees. Awards for best student and postdoc talk and poster.</p></div>
-      <div class="prog-card"><span class="pc-icon">⭐</span><h3>Invited Speakers</h3><p>Invited speaker lineup coming soon. <span class="tbd">tba</span></p></div>
-      <div class="prog-card"><span class="pc-icon">🔥</span><h3>Friday BBQ Social</h3><p>Join us Friday evening at Promontory Point in Hyde Park for a lakeside BBQ dinner, starting at 5 pm.</p></div>
+    <h2>SCHEDULE</h2>
+    <p><a href="schedule-detailed.pdf" target="_blank">Download the full schedule with speaker details →</a></p>
+
+    <div style="margin-top: 48px; margin-bottom: 48px;">
+
+      <div style="margin-bottom: 40px;">
+        <h4 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.04em; color: var(--maroon-bright); margin-bottom: 20px;">Friday, August 21</h4>
+        <div style="background: var(--bg2); border: 1px solid var(--rule); border-left: 3px solid var(--maroon-bright); padding: 0;">
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">12:00–12:30 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Registration &amp; Poster Setup</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">12:30–12:45 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Opening Remarks &amp; Welcome</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">12:45–2:15 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Session 1: Genomics of Adaptation</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">2:15–2:45 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Faculty Spotlight: Rachel Moran</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">2:45–4:15 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Poster Session (coffee &amp; snacks)</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">4:15–5:15 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Session 2: Human Genetics &amp; Complex Traits</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">5:15–6:00 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Travel to Promontory Point</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr;">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">6:00 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Friday Social &amp; BBQ — Lakeside dinner at Promontory Point in Hyde Park</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.04em; color: var(--maroon-bright); margin-bottom: 20px;">Saturday, August 22</h4>
+        <div style="background: var(--bg2); border: 1px solid var(--rule); border-left: 3px solid var(--maroon-bright); padding: 0;">
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">8:30–9:00 am</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Breakfast &amp; Poster Setup</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">9:00–10:00 am</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Keynote Address: Angela Hancock (Purdue)</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">10:00–10:20 am</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Coffee Break</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">10:20–11:50 am</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Session 3: Theory &amp; Inference</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">11:50 am–12:20 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Faculty Spotlight: Arslan Zaidi (Minnesota)</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">12:20–1:20 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Lunch</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">1:20–2:50 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Poster Session (coffee &amp; snacks)</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">2:50–4:35 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Session 4: Evolutionary Genomics of Non-Model Systems</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid var(--rule);">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">4:35–4:50 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Judge Deliberation</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 180px 1fr;">
+            <div style="padding: 16px 20px; background: var(--bg3); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--gold);">4:50–5:00 pm</div>
+            <div style="padding: 16px 20px; color: var(--text-mid);">Awards &amp; Closing</div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 <section id="logistics">
@@ -238,7 +279,7 @@
         <div class="logistics-val">
           Coffee will be available during breaks throughout the meeting.<br>
           <strong style="color: var(--text);">Friday:</strong> Dinner provided at the BBQ social from 5 pm onward at Promontory Point.<br>
-          <strong style="color: var(--text);">Saturday:</strong> Breakfast served 8:30–9:00 am; lunch provided 12:15–2:00 pm; snacks during breaks. Dinner on your own.
+          <strong style="color: var(--text);">Saturday:</strong> Breakfast served 8:30–9:00 am; lunch provided 12:20–1:20 pm; coffee and snacks during poster sessions. Dinner on your own.
         </div>
       </div>
       <div class="logistics-row">
